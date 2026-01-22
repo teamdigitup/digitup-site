@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>digitUP | Agência de Marketing Digital de Performance</title>
+
+  <!-- SEO AVANÇADO -->
+  <meta name="description" content="digitUP é uma agência de marketing digital focada em performance, tráfego pago, funis de vendas, CRO e crescimento previsível para empresas e profissionais." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="digitUP" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="digitUP | Marketing Digital de Performance" />
+  <meta property="og:description" content="Estratégia, tráfego pago e crescimento previsível para empresas." />
+  <meta property="og:type" content="website" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+/* ======================================================
+   RESET GLOBAL
+====================================================== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#16001f,#05050a 75%);
+  color:#fff;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+:root{
+  --roxo:#8b5cf6;
+  --roxo-dark:#6d28d9;
+  --neon:#22ff88;
+  --preto:#05050a;
+  --cinza:#cbd5f5;
+  --cinza-escuro:#9ca3af;
+  --glass:rgba(255,255,255,.05);
+}
+
+/* ======================================================
+   UTILIDADES
+====================================================== */
+.container{max-width:1280px;margin:auto;padding:0 24px;}
+.text-center{text-align:center;}
+.mt-80{margin-top:80px;}
+
+/* ======================================================
+   BOTÕES
+====================================================== */
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:18px 54px;
+  background:var(--neon);
+  color:#000;
+  font-weight:800;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 0 35px rgba(34,255,136,.45);
+  transition:.35s ease;
+}
+.btn-primary:hover{transform:translateY(-3px) scale(1.05);}
+
+.btn-outline{
+  padding:16px 46px;
+  border-radius:999px;
+  border:1px solid var(--roxo);
+  color:var(--roxo);
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn-outline:hover{background:var(--roxo);color:#fff;}
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+nav{
+  position:fixed;top:0;width:100%;z-index:999;
+  background:rgba(5,5,10,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(139,92,246,.25);
+}
+.nav-content{
+  max-width:1280px;margin:auto;
+  padding:18px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-size:26px;font-weight:900;color:var(--roxo);}
+.nav-links a{
+  margin-left:28px;font-size:14px;
+  color:#fff;text-decoration:none;font-weight:500;
+}
+.nav-links a:hover{color:var(--neon);}
+
+/* ======================================================
+   HERO
+====================================================== */
+header{
+  padding:200px 0 140px; /* espaço extra por causa do menu fixo */
+  text-align:center;
+}
+header h1{
+  font-size:42px;
+  max-width:900px;
+  margin:24px auto;
+  color:var(--roxo);
+  text-shadow:0 0 32px rgba(139,92,246,.6);
+  line-height:1.3;
+}
+header p{
+  max-width:860px;
+  margin:0 auto 42px;
+  font-size:18px;
+  color:var(--cinza);
+}
+.hero-links{margin-top:60px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;}
+.hero-links a{padding:16px 44px;border-radius:999px;font-weight:700;text-decoration:none;transition:.3s;}
+.link-inicio{border:1px solid var(--neon);color:var(--neon);} .link-inicio:hover{background:var(--neon);color:#000;}
+.link-empresa{border:1px solid var(--roxo);color:var(--roxo);} .link-empresa:hover{background:var(--roxo);color:#fff;}
+
+/* ======================================================
+   SEÇÕES PADRÃO
+====================================================== */
+section{padding:150px 0;}
+.section-title{text-align:center;margin-bottom:90px;}
+.section-title h2{font-size:36px;color:var(--roxo);} 
+.section-title p{max-width:880px;margin:22px auto 0;font-size:18px;color:var(--cinza);} 
+
+/* ======================================================
+   CARDS
+====================================================== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;}
+.card{
+  background:var(--glass);
+  border-radius:28px;
+  padding:52px;
+  border:1px solid rgba(139,92,246,.35);
+  transition:.35s ease;
+}
+.card:hover{transform:translateY(-12px);box-shadow:0 0 45px rgba(139,92,246,.45);} 
+.card i{font-size:36px;color:var(--neon);margin-bottom:22px;} 
+.card h3{font-size:22px;margin-bottom:14px;} 
+.card p{color:var(--cinza);} 
+
+/* ======================================================
+   MÉTODO + ANIMAÇÕES
+====================================================== */
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;} 
+.method-group{
+  grid-column:1/-1;
+  margin:80px 0 30px;
+  text-align:center;
+}
+.method-group h3{
+  font-size:34px;
+  color:var(--roxo);
+}
+.method-group p{
+  margin-top:12px;
+  color:var(--cinza);
+}
+.step{
+  background:rgba(255,255,255,.04);
+  padding:46px;
+  border-radius:26px;
+  border:1px solid rgba(139,92,246,.35);
+  opacity:0;
+  transform:translateY(40px) scale(.96);
+  transition:all .8s ease;
+}
+.step.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+.step span{font-size:13px;color:var(--neon);font-weight:700;letter-spacing:1px;}
+.step h3{margin:14px 0 12px;} 
+.step.pro{
+  border:1px solid rgba(34,255,136,.6);
+  box-shadow:0 0 35px rgba(34,255,136,.25);
+}
+.step.pro h3{color:var(--neon);} 
+
+/* ======================================================
+   SERVIÇOS DETALHADOS
+====================================================== */
+.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;} 
+.service{
+  background:var(--glass);
+  padding:48px;border-radius:26px;
+  border:1px solid rgba(139,92,246,.35);
+}
+.service h4{margin-bottom:14px;color:var(--neon);} 
+
+/* ======================================================
+   PROVA SOCIAL
+====================================================== */
+.social-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center;} 
+.metric{padding:52px 30px;background:var(--glass);border-radius:22px;border:1px solid rgba(139,92,246,.35);} 
+.metric h4{font-size:44px;color:var(--neon);} 
+.metric p{margin-top:10px;color:var(--cinza);} 
+
+/* ======================================================
+   CTA FINAL
+====================================================== */
+.final-cta{padding:170px 0;text-align:center;background:linear-gradient(180deg,#16001f,#05050a);} 
+.final-cta h2{font-size:50px;color:var(--roxo);} 
+.final-cta p{max-width:860px;margin:28px auto 52px;font-size:22px;color:var(--cinza);} 
+
+/* ======================================================
+   FOOTER
+====================================================== */
+footer{padding:90px 20px;text-align:center;border-top:1px solid rgba(139,92,246,.25);font-size:14px;color:var(--cinza-escuro);} 
+footer a{color:var(--neon);text-decoration:none;} 
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+@media(max-width:768px){
+  header{padding:160px 0 120px;}
+  header h1{font-size:32px;}
+  header p{font-size:16px;}
+  .section-title h2{font-size:30px;}
+}
+  header p{font-size:18px;}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-content">
+    <div class="logo">digitUP</div>
+    <div class="nav-links">
+      <a href="#sobre">Quem Somos</a>
+      <a href="#metodo">Método</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="https://wa.me/5511993353331">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container">
+  <h1>digitUP</h1>
+  <p>Na digitUP, estratégia, tráfego pago e dados se unem para criar crescimento previsível e vendas consistentes.</p>
+  <a href="https://wa.me/5511993353331" class="btn-primary">Falar com Especialista</a>
+
+  <div class="hero-links">
+    <a href="iniciantes.html" class="link-inicio">Quero Começar no Marketing Digital</a>
+    <a href="empresas.html" class="link-empresa">Sou Empresa e Quero Escalar Vendas</a>
+  </div>
+</header>
+
+<section id="sobre" class="container">
+  <div class="section-title">
+    <h2>Quem é a digitUP</h2>
+    <p>Somos uma agência focada em performance, não em métricas de vaidade.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><i class="fa-solid fa-chess"></i><h3>Estratégia</h3><p>Planejamento orientado a dados.</p></div>
+    <div class="card"><i class="fa-solid fa-chart-line"></i><h3>Performance</h3><p>ROI e previsibilidade.</p></div>
+    <div class="card"><i class="fa-solid fa-rocket"></i><h3>Escala</h3><p>Crescimento sustentável.</p></div>
+  </div>
+</section>
+
+<section id="metodo" class="container">
+  <div class="section-title"><h2>Método digitUP</h2><p>Processo validado de crescimento.</p></div>
+  <div class="method-grid">
+
+    <div class="method-group">
+      <h3>Framework digitUP Growth System™</h3>
+      <p>Um sistema completo de crescimento previsível, do tráfego à escala.</p>
+    </div>
+
+    <div class="method-group">
+      <h3>Método Base (Fundação)</h3>
+      <p>Os pilares que sustentam qualquer operação de marketing de alta performance.</p>
+    </div>
+    <div class="step"><span>01</span><h3>Atração</h3><p>Tráfego pago estratégico em Meta Ads, Google Ads e canais de aquisição.</p></div>
+    <div class="step"><span>02</span><h3>Pesquisa de Mercado</h3><p>Análise de concorrência, oferta e comportamento do público.</p></div>
+    <div class="step"><span>03</span><h3>Posicionamento</h3><p>Clareza de mensagem, proposta de valor e diferenciação.</p></div>
+    <div class="step"><span>04</span><h3>Qualificação</h3><p>Segmentação, ICP, criativos e mensagens alinhadas ao público ideal.</p></div>
+    <div class="step"><span>05</span><h3>Conversão</h3><p>Landing pages, ofertas e CRO focados em alta taxa de conversão.</p></div>
+    <div class="step"><span>06</span><h3>Nutrição</h3><p>Automação de e-mails, WhatsApp e conteúdos estratégicos.</p></div>
+    <div class="step"><span>07</span><h3>Autoridade</h3><p>Conteúdo estratégico, branding e fortalecimento da marca.</p></div>
+    <div class="step"><span>08</span><h3>Relacionamento</h3><p>Retenção de clientes e aumento de LTV.</p></div>
+    <div class="step"><span>09</span><h3>Vendas</h3><p>Processos comerciais, CRM e fechamento previsível.</p></div>
+    <div class="step"><span>10</span><h3>Pós-venda</h3><p>Experiência do cliente, fidelização e recompra.</p></div>
+    <div class="step"><span>11</span><h3>Análise de Dados</h3><p>Dashboards, métricas reais e otimização contínua.</p></div>
+    <div class="step"><span>12</span><h3>Escala</h3><p>Aumento de orçamento, novos canais e crescimento sustentável.</p></div>
+          <div class="method-group">
+      <h3>Métodos Proprietários digitUP</h3>
+      <p>Frameworks exclusivos criados a partir de dados reais e validação em projetos ativos.</p>
+    </div>
+
+    <div class="step pro"><span>13</span><h3>Método UPStart</h3><p>Diagnóstico profundo do negócio, mercado e objetivos reais.</p></div>
+        <div class="step pro"><span>14</span><h3>Método UPICP</h3><p>Definição avançada de ICP, personas e jornada de compra.</p></div>
+        <div class="step pro"><span>15</span><h3>Método UPOffer</h3><p>Criação de ofertas irresistíveis com foco em conversão.</p></div>
+        <div class="step pro"><span>16</span><h3>Método UPAds</h3><p>Arquitetura de campanhas, criativos e testes contínuos.</p></div>
+        <div class="step pro"><span>17</span><h3>Método UPLanding</h3><p>Landing pages validadas por dados e UX.</p></div>
+        <div class="step pro"><span>18</span><h3>Método UPFollow</h3><p>Follow-up automatizado multicanal.</p></div>
+        <div class="step pro"><span>19</span><h3>Método UPScale</h3><p>Escala controlada com previsibilidade financeira.</p></div>
+        <div class="step pro"><span>20</span><h3>Método UPData</h3><p>Leitura diária de métricas que realmente importam.</p></div>
+        <div class="step pro"><span>21</span><h3>Método UPOptimize</h3><p>Otimização contínua baseada em testes A/B.</p></div>
+        <div class="step pro"><span>22</span><h3>Método UPLong</h3><p>Estratégias de longo prazo para crescimento sustentável.</p></div>
+  </div>
+</section>
+
+<script>
+// ANIMAÇÃO DOS MÉTODOS AO SCROLL
+const steps = document.querySelectorAll('.step');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.2 });
+
+steps.forEach(step => observer.observe(step));
+</script>
+
+<section id="servicos" class="container">
+  <div class="section-title"><h2>Serviços</h2><p>Soluções completas de marketing digital.</p></div>
+  <div class="services-list">
+    <div class="service"><h4>Tráfego Pago</h4><p>Meta Ads, Google Ads e escala.</p></div>
+    <div class="service"><h4>Funis de Vendas</h4><p>Conversão e CRO.</p></div>
+    <div class="service"><h4>Consultoria</h4><p>Estratégia e dados.</p></div>
+  </div>
+</section>
+
+<section id="solucoes" class="container">
+  <div class="section-title"><h2>Soluções digitUP</h2><p>Escolha o melhor caminho.</p></div>
+  <div class="cards">
+    <div class="card"><h3>Para Iniciantes</h3><p>Formação e direcionamento.</p><br><a href="iniciantes.html" class="btn-outline">Acessar</a></div>
+    <div class="card"><h3>Para Empresas</h3><p>Escala de vendas.</p><br><a href="empresas.html" class="btn-outline">Acessar</a></div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="social-proof">
+    <div class="metric"><h4>+120</h4><p>Projetos</p></div>
+    <div class="metric"><h4>+R$3M</h4><p>Geridos</p></div>
+    <div class="metric"><h4>98%</h4><p>Satisfação</p></div>
+  </div>
+</section>
+
+<div class="final-cta">
+  <h2>Resultados Exigem Estratégia</h2>
+  <p>Construa crescimento previsível com a digitUP.</p>
+  <a href="https://wa.me/5511993353331" class="btn-primary">Falar com Especialista</a>
+</div>
+
+<footer>
+  <p>© 2026 • digitUP • Marketing Digital de Performance</p>
+  <p>📧 <a href="mailto:digitupp0@gmail.com">digitupp0@gmail.com</a></p>
+  <p>📱 <a href="https://wa.me/5511993353331">(11) 99335-3331</a></p>
+</footer>
+
+</body>
+</html>  

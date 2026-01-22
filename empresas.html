@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>digitUP Empresas | Escale Vendas com Performance</title>
+
+<meta name="description" content="A digitUP ajuda empresas a escalar vendas com tráfego pago, funis de conversão, automação e estratégias de performance orientadas a dados.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+:root{
+  --roxo:#8b5cf6;
+  --neon:#22ff88;
+  --preto:#05050a;
+  --cinza:#cbd5f5;
+  --cinza-escuro:#a1a1aa;
+  --borda:rgba(139,92,246,.3);
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Segoe UI, Arial, sans-serif;
+  background:radial-gradient(circle at top,#14001f,#05050a 75%);
+  color:white;
+  scroll-behavior:smooth;
+  line-height:1.6;
+}
+
+/* =========================
+   NAV
+========================= */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(5,5,10,.96);
+  padding:18px 45px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--borda);
+  z-index:999;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  color:var(--roxo);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:26px;
+  font-size:14px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--neon);
+}
+
+/* =========================
+   HERO
+========================= */
+header{
+  padding:210px 20px 170px;
+  text-align:center;
+}
+
+header h1{
+  font-size:62px;
+  max-width:1100px;
+  margin:auto;
+  color:var(--roxo);
+  text-shadow:0 0 40px rgba(139,92,246,.6);
+}
+
+header p{
+  max-width:950px;
+  margin:35px auto;
+  font-size:22px;
+  color:var(--cinza);
+}
+
+.cta{
+  display:inline-block;
+  padding:20px 65px;
+  background:var(--neon);
+  color:black;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:50px;
+  box-shadow:0 0 40px rgba(34,255,136,.6);
+  transition:.3s;
+}
+
+.cta:hover{
+  transform:scale(1.07);
+}
+
+/* =========================
+   SECTIONS PADRÃO
+========================= */
+section{
+  max-width:1250px;
+  margin:auto;
+  padding:120px 20px;
+}
+
+h2{
+  font-size:44px;
+  text-align:center;
+  color:var(--roxo);
+}
+
+.subtitle{
+  max-width:950px;
+  margin:30px auto 85px;
+  text-align:center;
+  font-size:21px;
+  color:var(--cinza);
+}
+
+/* =========================
+   PROBLEMAS
+========================= */
+.problems{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.problem{
+  background:rgba(255,255,255,.04);
+  padding:45px;
+  border-radius:24px;
+  border:1px solid var(--borda);
+}
+
+.problem h3{
+  color:#ff5c5c;
+  margin-bottom:12px;
+}
+
+/* =========================
+   SOLUÇÕES
+========================= */
+.solutions{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.solution{
+  background:rgba(255,255,255,.04);
+  padding:45px;
+  border-radius:24px;
+  border:1px solid var(--borda);
+}
+
+.solution h3{
+  color:var(--neon);
+  margin-bottom:12px;
+}
+
+/* =========================
+   MÉTODO
+========================= */
+.method{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+}
+
+.step{
+  background:rgba(255,255,255,.03);
+  padding:45px;
+  border-radius:24px;
+  border:1px solid var(--borda);
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+.results{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+}
+
+.result{
+  background:rgba(255,255,255,.04);
+  padding:45px;
+  border-radius:24px;
+  border:1px solid var(--borda);
+  text-align:center;
+}
+
+.result h3{
+  font-size:36px;
+  color:var(--neon);
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.final{
+  padding:150px 20px;
+  text-align:center;
+  background:linear-gradient(180deg,#14001f,#05050a);
+}
+
+.final h2{
+  font-size:46px;
+}
+
+.final p{
+  max-width:900px;
+  margin:35px auto 50px;
+  font-size:22px;
+  color:var(--cinza);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  padding:70px 20px;
+  text-align:center;
+  border-top:1px solid var(--borda);
+  font-size:14px;
+  color:var(--cinza-escuro);
+}
+
+footer a{
+  color:var(--neon);
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">digitUP</div>
+  <div>
+    <a href="#problemas">Problemas</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#metodo">Método</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <h1>Escale Vendas da Sua Empresa com Estratégia, Tráfego e Performance</h1>
+
+  <p>
+    Se sua empresa já tem produto ou serviço validado,
+    mas enfrenta dificuldade para gerar leads qualificados
+    e vendas previsíveis, a digitUP constrói a estrutura
+    completa para escalar.
+  </p>
+
+  <a href="https://wa.me/5511993353331" class="cta">
+    Falar com Especialista
+  </a>
+</header>
+
+<!-- PROBLEMAS -->
+<section id="problemas">
+  <h2>Problemas que Impedem Sua Empresa de Crescer</h2>
+  <p class="subtitle">
+    A maioria das empresas não falha por falta de esforço,
+    mas por falta de estratégia.
+  </p>
+
+  <div class="problems">
+    <div class="problem">
+      <h3>Leads desqualificados</h3>
+      <p>Anúncios que atraem curiosos e não compradores.</p>
+    </div>
+
+    <div class="problem">
+      <h3>Vendas imprevisíveis</h3>
+      <p>Dependência de indicação ou sazonalidade.</p>
+    </div>
+
+    <div class="problem">
+      <h3>Alto custo por aquisição</h3>
+      <p>Campanhas sem otimização e estratégia.</p>
+    </div>
+
+    <div class="problem">
+      <h3>Falta de processo</h3>
+      <p>Sem funil, sem automação e sem previsibilidade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÕES -->
+<section id="solucoes">
+  <h2>Soluções digitUP para Empresas</h2>
+  <p class="subtitle">
+    Construímos um sistema completo de crescimento.
+  </p>
+
+  <div class="solutions">
+    <div class="solution">
+      <h3>Tráfego Pago Estratégico</h3>
+      <p>Meta Ads, Google Ads e TikTok Ads focados em ROI.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Funis de Conversão</h3>
+      <p>Landing pages, ofertas e copy que convertem.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Automação</h3>
+      <p>Follow-ups, nutrição e CRM.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Escala</h3>
+      <p>Processos replicáveis e crescimento previsível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section id="metodo">
+  <h2>Método digitUP para Empresas</h2>
+  <p class="subtitle">
+    Um modelo validado para escalar com segurança.
+  </p>
+
+  <div class="method">
+    <div class="step">
+      <h3>Diagnóstico</h3>
+      <p>Análise completa do negócio.</p>
+    </div>
+
+    <div class="step">
+      <h3>Planejamento</h3>
+      <p>Estratégia orientada a dados.</p>
+    </div>
+
+    <div class="step">
+      <h3>Execução</h3>
+      <p>Campanhas, funis e automações.</p>
+    </div>
+
+    <div class="step">
+      <h3>Otimização</h3>
+      <p>Melhoria contínua de performance.</p>
+    </div>
+
+    <div class="step">
+      <h3>Escala</h3>
+      <p>Crescimento previsível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section>
+  <h2>Resultados Esperados</h2>
+  <p class="subtitle">
+    Crescimento real, não promessas vazias.
+  </p>
+
+  <div class="results">
+    <div class="result">
+      <h3>+120%</h3>
+      <p>Leads qualificados</p>
+    </div>
+
+    <div class="result">
+      <h3>ROI 3x a 6x</h3>
+      <p>Retorno sobre anúncios</p>
+    </div>
+
+    <div class="result">
+      <h3>Previsibilidade</h3>
+      <p>Processos escaláveis</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="final" id="contato">
+  <h2>Sua Empresa Está Pronta para Escalar</h2>
+  <p>
+    Se você quer sair da instabilidade
+    e construir crescimento previsível,
+    a digitUP é o parceiro certo.
+  </p>
+
+  <a href="https://wa.me/5511993353331" class="cta">
+    Falar com Especialista Agora
+  </a>
+</div>
+
+<footer>
+  <p>© 2026 • digitUP • Marketing Digital de Performance</p>
+  <p>📧 <a href="mailto:digitupp0@gmail.com">digitupp0@gmail.com</a></p>
+  <p>📱 <a href="https://wa.me/5511993353331">(11) 99335-3331</a></p>
+</footer>
+
+</body>
+</html>
