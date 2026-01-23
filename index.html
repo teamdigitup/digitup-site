@@ -230,22 +230,39 @@ footer a{color:var(--neon);text-decoration:none;}
 /* ======================================================
    RESPONSIVO
 ====================================================== */
-@media(max-width:768px){
-  header{padding:160px 0 120px;}
-  header h1{font-size:32px;}
-  header p{font-size:16px;}
-  .section-title h2{font-size:30px;}
+@media (max-width:768px){
+
+header{
+  padding:140px 0 100px;
 }
-  header p{font-size:18px;}
-  .nav-content{
+
+header h1{
+  font-size:30px;
+}
+
+header p{
+  font-size:16px;
+}
+
+section{
+  padding:100px 0;
+}
+
+.section-title h2{
+  font-size:28px;
+}
+
+/* NAV */
+.nav-content{
   display:flex;
   justify-content:space-between;
   align-items:center;
   width:100%;
 }
 
+/* BOTÃO HAMBÚRGUER */
 .menu-toggle{
-  display:none;
+  display:flex;
   flex-direction:column;
   gap:6px;
   cursor:pointer;
@@ -258,18 +275,11 @@ footer a{color:var(--neon);text-decoration:none;}
   border-radius:4px;
 }
 
-/* MOBILE */
-@media (max-width: 768px){
-
-.menu-toggle{
-  display:flex;
-}
-
+/* MENU MOBILE */
 .nav-links{
   position:absolute;
   top:100%;
   left:0;
-  right:0;
   width:100%;
   background:rgba(5,5,10,.98);
 
@@ -280,8 +290,9 @@ footer a{color:var(--neon);text-decoration:none;}
   gap:20px;
   padding:30px 0;
 
-  transform:translateY(-110%);
+  transform:translateY(-120%);
   transition:transform .4s ease;
+  z-index:998;
 }
 
 .nav-links.active{
@@ -292,45 +303,51 @@ footer a{color:var(--neon);text-decoration:none;}
   font-size:16px;
   margin:0;
 }
+
+/* GRIDS EM 1 COLUNA */
+.cards,
+.services-list,
+.social-proof{
+  grid-template-columns:1fr;
 }
 
+/* BOTÕES */
+.btn-primary,
+.btn-outline{
+  padding:14px 32px;
+  font-size:14px;
+}
 
+.hero-links{
+  flex-direction:column;
+}
+}
 
 </style>
-</head>
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-  </script>
-  
-<body>
+</head> 
 
   <nav>
-    <div class="nav-content">
-      <div class="logo">digitUP</div>
-  
-      <!-- BOTÃO HAMBÚRGUER -->
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-  
-      <!-- LINKS -->
-      <div class="nav-links" id="nav-links">
-        <a href="#sobre">Quem Somos</a>
-        <a href="#metodo">Método</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#solucoes">Soluções</a>
-        <a href="https://wa.me/5511993353331">Contato</a>
-      </div>
+  <div class="nav-content">
+    <div class="logo">digitUP</div>
+
+    <!-- BOTÃO HAMBÚRGUER -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </nav>
-  
+
+    <!-- LINKS -->
+    <div class="nav-links" id="nav-links">
+      <a href="#sobre">Quem Somos</a>
+      <a href="#metodo">Método</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="https://wa.me/5511993353331">Contato</a>
+    </div>
+
+  </div>
+</nav>
 
 <header class="container">
   <h1>digitUP</h1>
@@ -449,5 +466,27 @@ steps.forEach(step => observer.observe(step));
   <p>📱 <a href="https://wa.me/5511993353331">(11) 99335-3331</a></p>
 </footer>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+  
+    // Abre e fecha o menu
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  
+    // Fecha ao clicar em um link
+    const links = navLinks.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  
+  });
+  </script>
+  
 </body>
 </html>
